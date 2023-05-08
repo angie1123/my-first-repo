@@ -1,0 +1,103 @@
+#about__section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+}
+
+.about__title {
+  display: flex;
+  align-items: center;
+  color: var(--secondary-gray);
+  font-size: var(--text-xl);
+  font: 600;
+}
+
+.about__title > span {
+  font-size: var(--text-base);
+  margin-right: 1rem;
+  color: var(--primary-green);
+}
+
+.about__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about__content {
+  margin: 2.5rem 0;
+  padding-right: 2.5rem;
+  flex: 1;
+}
+
+/* * + * means everything hd previoud siblinng */
+.about__content > * + * {
+  margin-top: 2.5rem;
+}
+
+.about__content--text {
+  font-size: var(--text-lg);
+}
+
+/* * + * everything had previous sibling apply margin top */
+.about__content--text > * + * {
+  margin-top: 1rem;
+}
+
+.about__technologies {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  /* makes  the bullet point inside */
+  list-style-position: inside;
+
+  font-size: var(--text-sm);
+}
+
+/* li::marker is to select the bullet point of the list */
+.about__technologies > li::marker {
+  color: var(--primary-green);
+}
+
+.about__image {
+  width: 18rem;
+  height: 18rem;
+}
+
+.about__image > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .about__title {
+    font-size: var(--text-2xl);
+  }
+
+  .about__title > span {
+    font-size: var(--text-lg);
+  }
+}
+
+@media (min-width: 768px) {
+  .about__title {
+    font-size: var(--text-3xl);
+  }
+
+  .about__title > span {
+    font-size: var(--text-xl);
+  }
+
+  .about__container {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 0;
+  }
+
+  .about__content {
+    margin-right: 3rem;
+  }
+}

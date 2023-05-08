@@ -1,0 +1,81 @@
+#experience__section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10rem;
+  height: 100vh;
+}
+
+.experience__title {
+  color: #ccd6f6;
+  font-size: var(--text-xl);
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.experience__title > span {
+  color: var(--primary-green);
+  margin-right: 1rem;
+}
+
+.experience__container {
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.5rem;
+}
+
+.experience__card {
+  border: 1px solid #374151;
+  padding: 1.5rem 1.5rem;
+}
+
+.experience__position {
+  margin: 1.5rem 0;
+  color: #ccd6f6;
+  font-size: var(--text-lg);
+  font-weight: 400;
+}
+
+.experience__duration {
+  margin-bottom: 1.5rem;
+}
+
+.experience__jobscope {
+  list-style-position: inside;
+}
+
+.experience__jobscope > li::marker {
+  color: var(--primary-green);
+}
+
+@media (min-width: 640px) {
+  .experience__title {
+    font-size: var(--text-2xl);
+  }
+
+  .experience__title > span {
+    font-size: var(--text-lg);
+  }
+}
+
+@media (min-width: 768px) {
+  .experience__title {
+    font-size: var(--text-3xl);
+  }
+
+  .experience__title > span {
+    font-size: var(--text-xl);
+  }
+
+  #experience__section {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .experience__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+}

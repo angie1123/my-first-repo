@@ -1,0 +1,94 @@
+:root {
+  --primary-green: #64ffda;
+  --secondary-gray: #ccd6f6;
+  --primary-blue: #0a192f;
+
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+  --text-7xl: 4.5rem;
+}
+
+html {
+  /* make all html text become this font family */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  background-color: #0a192f;
+  color: #8892be;
+}
+
+/* remove default style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.highlight {
+  color: var(--primary-green);
+}
+
+.transition__underline {
+  background-image: linear-gradient(transparent, transparent),
+    linear-gradient(var(--primary-green), var(--primary-green));
+
+  /* first value how long of x axis,
+  /* second value the y axis (in this case thickness of bottom line) */
+  background-size: 0% 2px;
+
+  /* x 0%, y to the bottom of the text 100%(get bottom line)  */
+  background-position: 0% 100%;
+
+  /* The background-repeat CSS property sets how background images are repeated.
+ A background image can be repeated along the horizontal and vertical axes, 
+ or not repeated at all. */
+  background-repeat: no-repeat;
+  /* put here to get the ease in out effect when not hover on it also,
+  or else the line will directly disappear when not hovering */
+  transition: background-size 0.2s ease-in-out;
+}
+
+.transition__underline:hover {
+  /* first value how long of x axis second value the width of background size(bottom line) */
+  /* x axis go to 100% from 0%（0% is when not hovering） y axis 2 px */
+  background-size: 100% 2px;
+}
+
+main {
+  /* to use margin auto must have width */
+  max-width: 24rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  main {
+    max-width: 34rem;
+  }
+}
+
+@media (min-width: 768px) {
+  main {
+    max-width: 44rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    max-width: 54rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  main {
+    max-width: 64rem;
+  }
+}

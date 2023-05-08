@@ -1,0 +1,28 @@
+#footer__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--secondary-gray);
+  padding: 2.5rem;
+}
+
+.footer__icon--container {
+  display: flex;
+  column-gap: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.footer__icon--link {
+  color: var(--secondary-gray);
+}
+
+.footer__icon {
+  font-size: 1.25rem;
+
+  /* inherent color from .footer__icon--link */
+  fill: currentColor;
+}
+
+.footer__icon:hover {
+  color: var(--primary-green);
+}
